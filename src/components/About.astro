@@ -1,0 +1,72 @@
+---
+import { ChevronRight, Play, Phone } from 'lucide-react';
+---
+
+<section class="py-16 bg-white dark:bg-dark-primary transition-colors">
+  <div class="container mx-auto px-4 max-w-7xl"> <!-- Reducido el ancho máximo a max-w-5xl -->
+    <div class="text-center mb-8">
+      <span class="inline-block px-4 py-1 rounded-full bg-primary-lighter dark:bg-dark-tertiary text-primary dark:text-dark-accent text-sm font-medium">
+        Sobre Nosotros →
+      </span>
+    </div>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+      <div class="flex justify-center items-center"> <!-- Añadido flex y justify-center para centrar la imagen -->
+        <div class="relative rounded-lg overflow-hidden max-w-md mx-auto"> <!-- Añadido max-w-md y mx-auto para centrar y limitar el ancho -->
+          <img 
+            src="/hero-bg.jpg" 
+            alt="Equipo de desarrollo" 
+            class="w-full h-auto object-cover rounded-lg"
+          />
+          <div class="absolute bottom-4 right-4 bg-primary dark:bg-dark-tertiary rounded-full p-3 text-white cursor-pointer transition-transform hover:scale-110">
+            <Play className="h-6 w-6" />
+          </div>
+        </div>
+      </div>
+      <div>
+        <h2 class="text-3xl font-bold mb-4">
+          Elige <span class="gradient-text">La Mejor</span> Empresa de Desarrollo
+        </h2>
+        <div class="border-l-4 border-primary dark:border-dark-accent pl-4 py-2 mb-6">
+          <p class="text-gray-600 dark:text-primary-lighter">
+            En orion.dev no solo desarrollamos software, creamos soluciones que transforman negocios. Nuestro enfoque combina tecnología de vanguardia con estrategias centradas en el usuario para maximizar el valor de cada proyecto.
+          </p>
+        </div>
+        <div class="grid grid-cols-2 gap-4 mb-6">
+          <div class="flex items-center gap-3">
+            <div class="bg-primary-lighter dark:bg-dark-tertiary rounded-full p-2">
+              <span class="text-primary dark:text-dark-accent text-xl">✓</span>
+            </div>
+            <div>
+              <h4 class="font-semibold text-primary dark:text-dark-accent">Garantía de Calidad</h4>
+            </div>
+          </div>
+          <div class="flex items-center gap-3">
+            <div class="bg-primary-lighter dark:bg-dark-tertiary rounded-full p-2">
+              <span class="text-primary dark:text-dark-accent text-xl">🛠️</span>
+            </div>
+            <div>
+              <h4 class="font-semibold text-primary dark:text-dark-accent">Soporte Técnico 24/7</h4>
+            </div>
+          </div>
+        </div>
+        <div class="flex flex-wrap gap-4">
+          <a href="#contact" class="btn-primary">
+            Contactar <ChevronRight className="ml-2 h-4 w-4" />
+          </a>
+          <div class="flex items-center gap-2">
+            <div class="bg-primary-lighter dark:bg-dark-tertiary rounded-full p-2">
+              <Phone className="h-5 w-5 text-primary dark:text-dark-accent" />
+            </div>
+            <div>
+              <div class="text-xs text-gray-500 dark:text-primary-lighter">Llámanos</div>
+              <div class="font-semibold text-primary dark:text-dark-accent">(+1) 234-567-8901</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+

@@ -1,0 +1,27 @@
+---
+import { ChevronRight } from 'lucide-react';
+---
+
+<section class="relative bg-gradient-to-r from-indigo-900/90 to-purple-800/80 dark:from-gray-900 dark:to-gray-800 text-white">
+  <div class="absolute inset-0 z-0 bg-[url('/ux-ui-hero.jpg')] bg-cover bg-center opacity-30"></div>
+  <div class="container mx-auto px-4 py-16 md:py-24 relative z-10">
+    <div class="max-w-2xl">
+      <div class="inline-block bg-white dark:bg-gray-800 text-gray-800 dark:text-gray-200 rounded-full px-4 py-1 text-sm font-medium mb-6">
+        Desarrollo de software de vanguardia →
+      </div>
+      <h1 class="text-4xl md:text-5xl font-bold mb-4">Transformamos ideas<br />en soluciones digitales</h1>
+      <p class="text-lg mb-8">
+        Creamos software a medida que impulsa el crecimiento<br />
+        de tu negocio y mejora la experiencia de tus usuarios.
+      </p>
+      <div class="flex flex-wrap gap-4">
+        <a href="#services" class="gradient-bg text-white rounded-full px-6 py-2 flex items-center transition-transform hover:scale-105">
+          Nuestros Servicios <ChevronRight className="ml-2 h-4 w-4" />
+        </a>
+        <a href="#contact" class="bg-white/10 backdrop-blur-sm text-white border border-white/20 rounded-full px-6 py-2 transition-transform hover:scale-105">
+          Contactar
+        </a>
+      </div>
+    </div>
+  </div>
+</section>

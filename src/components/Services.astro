@@ -1,0 +1,41 @@
+---
+import ServiceCard from './ServiceCard.astro';
+
+const services = [
+  {
+    icon: "💻",
+    title: "Desarrollo Web",
+    description: "Creamos sitios web y aplicaciones web modernas, rápidas y responsivas."
+  },
+  {
+    icon: "📱",
+    title: "Desarrollo Móvil",
+    description: "Aplicaciones nativas y multiplataforma para iOS y Android."
+  },
+  {
+    icon: "🔧",
+    title: "Consultoría Técnica",
+    description: "Asesoramiento experto para optimizar tus procesos tecnológicos."
+  },
+  {
+    icon: "🛡️",
+    title: "Ciberseguridad",
+    description: "Protección avanzada para tus sistemas y datos críticos."
+  },
+  {
+    icon: "🤖",
+    title: "Inteligencia Artificial",
+    description: "Soluciones de IA y machine learning para potenciar tu negocio."
+  }
+];
+---
+
+<section class="py-8 -mt-16 relative z-20">
+  <div class="container mx-auto px-4">
+    <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-4">
+      {services.map((service) => (
+        <ServiceCard icon={service.icon} title={service.title} />
+      ))}
+    </div>
+  </div>
+</section>

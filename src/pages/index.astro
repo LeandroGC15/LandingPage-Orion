@@ -1,0 +1,16 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Hero from '../components/Hero.astro';
+import Services from '../components/Services.astro';
+import Partners from '../components/Partners.astro';
+import About from '../components/About.astro';
+import Globe from '../components/Globe';
+---
+
+<Layout title="orion.dev - Desarrollo de Software">
+  <Hero />
+  <Services />
+  <Partners />
+  <About />
+  <Globe client:only="react" />
+</Layout>
