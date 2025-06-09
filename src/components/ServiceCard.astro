@@ -2,12 +2,88 @@
 export interface Props {
   icon: string;
   title: string;
+  href: string;
+  description: string;
 }
 
-const { icon, title } = Astro.props;
+const { icon, title, href, description } = Astro.props;
 ---
 
-<div class="bg-white dark:bg-gray-800 rounded-lg shadow-md p-6 text-center hover:shadow-lg transition-all hover:-translate-y-1">
-  <div class="text-4xl mb-4">{icon}</div>
-  <h3 class="font-semibold text-gray-800 dark:text-gray-200">{title}</h3>
-</div>
+<a href={href} class="block perspective-1000 group relative">
+  <div class="bg-white dark:bg-gray-800 rounded-lg shadow-md p-6 text-center hover:shadow-lg transition-all duration-300 transform-style-3d hover:rotate-y-10 hover:translate-z-20">
+    <div class="text-4xl mb-4 transform-style-3d">{icon}</div>
+    <h3 class="font-semibold text-gray-800 dark:text-gray-200 transform-style-3d">{title}</h3>
+  </div>
+
+  <!-- Preview Card -->
+  <div class="preview-card absolute -top-32 left-1/2 -translate-x-1/2 w-[400px] bg-gray-800/95 rounded-lg shadow-xl transform-style-3d opacity-0 pointer-events-none transition-all duration-300 group-hover:opacity-100 group-hover:translate-y-0 group-hover:rotate-y-0">
+    <div class="p-6 text-left">
+      <div class="flex items-center justify-between mb-6">
+        <div class="text-4xl text-blue-400">{icon}</div>
+        <div class="w-12 h-12 bg-blue-500/20 rounded-full flex items-center justify-center">
+          <svg class="w-6 h-6 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+          </svg>
+        </div>
+      </div>
+      <h3 class="text-2xl font-bold mb-4 text-blue-400">{title}</h3>
+      <div class="space-y-4">
+        <div class="bg-gray-700/50 rounded-lg p-4">
+          <h4 class="text-lg font-semibold text-blue-300 mb-2">Características Principales</h4>
+          <ul class="space-y-2 text-gray-300">
+            <li class="flex items-center">
+              <svg class="w-5 h-5 mr-2 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+              </svg>
+              Soluciones personalizadas
+            </li>
+            <li class="flex items-center">
+              <svg class="w-5 h-5 mr-2 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+              </svg>
+              Tecnologías de vanguardia
+            </li>
+            <li class="flex items-center">
+              <svg class="w-5 h-5 mr-2 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+              </svg>
+              Soporte continuo
+            </li>
+          </ul>
+        </div>
+        <p class="text-gray-300">{description}</p>
+      </div>
+    </div>
+  </div>
+</a>
+
+<style>
+  .perspective-1000 {
+    perspective: 1000px;
+  }
+  .transform-style-3d {
+    transform-style: preserve-3d;
+  }
+  .rotate-y-10 {
+    transform: rotateY(10deg);
+  }
+  .translate-z-20 {
+    transform: translateZ(20px);
+  }
+  .preview-card {
+    transform: translateY(20px) rotateY(-15deg) translateZ(0);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+  }
+  .preview-card::before {
+    content: '';
+    position: absolute;
+    top: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 20px;
+    height: 20px;
+    background: inherit;
+    clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+  }
+</style>

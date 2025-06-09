@@ -1,0 +1,41 @@
+---
+import Layout from '../../layouts/Layout.astro';
+---
+
+<Layout title="Desarrollo Web - orion.dev">
+  <section class="py-16">
+    <div class="container mx-auto px-4">
+      <div class="text-center mb-12">
+        <h1 class="text-4xl md:text-5xl font-bold mb-4 gradient-text">Desarrollo Web</h1>
+        <p class="text-lg md:text-xl text-gray-600 dark:text-primary-lighter max-w-3xl mx-auto">
+          Creamos sitios web y aplicaciones web modernas, rápidas y responsivas que impulsan el crecimiento de tu negocio.
+        </p>
+      </div>
+      
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+        <div class="prose dark:prose-invert max-w-none">
+          <h2 class="text-2xl font-semibold mb-4 text-primary dark:text-dark-accent">Nuestros Servicios de Desarrollo Web</h2>
+          <ul class="list-disc pl-6 mb-8 text-gray-700 dark:text-primary-lighter">
+            <li>Sitios web corporativos y empresariales</li>
+            <li>Aplicaciones web progresivas (PWA) de alto rendimiento</li>
+            <li>E-commerce y tiendas online personalizadas</li>
+            <li>Portales web interactivos y soluciones personalizadas</li>
+            <li>Integración de sistemas y APIs de terceros</li>
+          </ul>
+          
+          <h2 class="text-2xl font-semibold mb-4 text-primary dark:text-dark-accent">Tecnologías que Utilizamos</h2>
+          <ul class="list-disc pl-6 mb-8 text-gray-700 dark:text-primary-lighter">
+            <li>Frameworks Frontend: React, Vue.js, Angular</li>
+            <li>Backend: Node.js (Express, NestJS), Python (Django, Flask)</li>
+            <li>Bases de Datos: PostgreSQL, MongoDB, MySQL, Firebase</li>
+            <li>Servicios en la Nube: AWS, Google Cloud Platform, Azure</li>
+            <li>DevOps y Contenedores: Docker, Kubernetes</li>
+          </ul>
+        </div>
+        <div class="flex justify-center items-center">
+          <img src="/images/servicios/web.jpg" alt="Desarrollo Web" class="rounded-lg shadow-lg w-full max-w-md" />
+        </div>
+      </div>
+    </div>
+  </section>
+</Layout> 

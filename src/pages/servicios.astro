@@ -1,0 +1,60 @@
+import Layout from "../layouts/Layout.astro";
+import ServiceCard from "../components/ServiceCard";
+
+const services = [
+  {
+    title: "Desarrollo Web",
+    description: "Creamos sitios web modernos y responsivos utilizando las últimas tecnologías. Nuestro equipo de expertos desarrolla soluciones web personalizadas que se adaptan a tus necesidades específicas.",
+    icon: "🌐",
+    href: "/servicios/desarrollo-web",
+  },
+  {
+    title: "Desarrollo Móvil",
+    description: "Desarrollamos aplicaciones móviles nativas y multiplataforma para iOS y Android. Creamos experiencias móviles intuitivas y de alto rendimiento que destacan en el mercado.",
+    icon: "📱",
+    href: "/servicios/desarrollo-movil",
+  },
+  {
+    title: "Consultoría Técnica",
+    description: "Ofrecemos asesoramiento experto en tecnología y transformación digital. Ayudamos a tu empresa a tomar decisiones tecnológicas estratégicas y optimizar sus procesos.",
+    icon: "💡",
+    href: "/servicios/consultoria-tecnica",
+  },
+  {
+    title: "Ciberseguridad",
+    description: "Protegemos tu información y sistemas con soluciones de seguridad avanzadas. Implementamos medidas preventivas y reactivas para mantener tus datos seguros.",
+    icon: "🔒",
+    href: "/servicios/ciberseguridad",
+  },
+  {
+    title: "Inteligencia Artificial",
+    description: "Implementamos soluciones de IA para automatizar y optimizar tus procesos. Desarrollamos sistemas inteligentes que mejoran la eficiencia y la toma de decisiones.",
+    icon: "🤖",
+    href: "/servicios/inteligencia-artificial",
+  },
+];
+
+<Layout title="Servicios - Orion Dev">
+  <main class="min-h-screen bg-gradient-to-b from-gray-900 to-black text-white">
+    <div class="container mx-auto px-4 py-16">
+      <h1 class="text-4xl md:text-5xl font-bold text-center mb-4 bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent">
+        Nuestros Servicios
+      </h1>
+      <p class="text-xl text-center text-gray-300 mb-16 max-w-3xl mx-auto">
+        Ofrecemos soluciones tecnológicas integrales para impulsar tu negocio al siguiente nivel
+      </p>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+        {services.map((service) => (
+          <ServiceCard
+            client:load
+            title={service.title}
+            description={service.description}
+            icon={service.icon}
+            href={service.href}
+          />
+        ))}
+      </div>
+    </div>
+  </main>
+</Layout> 

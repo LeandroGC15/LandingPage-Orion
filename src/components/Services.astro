@@ -5,27 +5,32 @@ const services = [
   {
     icon: "💻",
     title: "Desarrollo Web",
-    description: "Creamos sitios web y aplicaciones web modernas, rápidas y responsivas."
+    description: "Creamos sitios web y aplicaciones web modernas, rápidas y responsivas.",
+    href: "/servicios/desarrollo-web"
   },
   {
     icon: "📱",
     title: "Desarrollo Móvil",
-    description: "Aplicaciones nativas y multiplataforma para iOS y Android."
+    description: "Aplicaciones nativas y multiplataforma para iOS y Android.",
+    href: "/servicios/desarrollo-movil"
   },
   {
     icon: "🔧",
     title: "Consultoría Técnica",
-    description: "Asesoramiento experto para optimizar tus procesos tecnológicos."
+    description: "Asesoramiento experto para optimizar tus procesos tecnológicos.",
+    href: "/servicios/consultoria-tecnica"
   },
   {
     icon: "🛡️",
     title: "Ciberseguridad",
-    description: "Protección avanzada para tus sistemas y datos críticos."
+    description: "Protección avanzada para tus sistemas y datos críticos.",
+    href: "/servicios/ciberseguridad"
   },
   {
     icon: "🤖",
     title: "Inteligencia Artificial",
-    description: "Soluciones de IA y machine learning para potenciar tu negocio."
+    description: "Soluciones de IA y machine learning para potenciar tu negocio.",
+    href: "/servicios/inteligencia-artificial"
   }
 ];
 ---
@@ -34,7 +39,11 @@ const services = [
   <div class="container mx-auto px-4">
     <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-4">
       {services.map((service) => (
-        <ServiceCard icon={service.icon} title={service.title} />
+        <ServiceCard 
+          icon={service.icon} 
+          title={service.title} 
+          href={service.href}
+        />
       ))}
     </div>
   </div>
